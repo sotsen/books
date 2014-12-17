@@ -1,0 +1,76 @@
+<html><head>
+ <meta http-equiv="Content-Type" content="text/html; charset=gbk">
+ <title>Gnu Privacy Guard (GnuPG) Mini Howto (English): Encrypt and decrypt</title>
+ <link href="GPGMiniHowto-5.html" rel="next">
+ <link href="GPGMiniHowto-3.html" rel="previous">
+ <link href="GPGMiniHowto.html#toc4" rel="contents">
+</head>
+<body>
+<a href="GPGMiniHowto-5.html">下页</a>
+<a href="GPGMiniHowto-3.html">上页</a>
+<a href="GPGMiniHowto.html#toc4">目录</a>
+<hr>
+<h2><a name="GPG-Minihowto-encrypt"></a> <a name="s4">4. 加密和解密</a></h2>
+
+<p>
+在安装和按照需要设置好所有事以后，我们就可以开始加密和解密了。
+</p><p>
+加密解密时，可以使用超过一把隐密钥匙。如果这种情况出现，你需要选择其中一把作为活跃的钥匙。要这样做，可以用命令行选项
+<code>-u UID</code> 
+或用
+<code> --local-user UID</code>
+。这样做将以我们想要使用的钥匙取代隐含的钥匙。
+</p><p>
+如果你想改变讯息接收者，可以用命令行选项
+<code>-r</code>
+或
+<code>--recipient</code>
+。
+</p><p>
+</p><h2><a name="ss4.1">4.1 加密</a></h2>
+
+<p>
+</p><p>
+加密的命令是：
+</p><blockquote><code>
+<pre>gpg -e Recipient [Data]
+</pre>
+</code></blockquote>
+或
+<blockquote><code>
+<pre>gpg --encrypt Recipient [Data]
+</pre>
+</code></blockquote>
+
+为避免别人宣称是你的风险，对所有你加密的东西签名是有用的。见
+<a href="GPGMiniHowto-5.html#GPG-Minihowto-signatures">签名</a>。
+<p>
+</p><h2><a name="ss4.2">4.2 解密</a>
+</h2>
+
+<p>
+解密的命令是：
+</p><blockquote><code>
+<pre>gpg [-d] [Data] 
+</pre>
+</code></blockquote>
+
+或
+<blockquote><code>
+<pre>gpg [--decrypt] [Data]
+</pre>
+</code></blockquote>
+
+在此，预设输出为
+<code>stdout</code>
+，但可以使用
+<code>-o</code>
+选项将输出转向到一个文件。
+<p>
+</p><hr>
+<a href="GPGMiniHowto-5.html">下页</a>
+<a href="GPGMiniHowto-3.html">上页</a>
+<a href="GPGMiniHowto.html#toc4">目录</a>
+
+
+</body></html>
